@@ -36,7 +36,8 @@ schema_view = get_schema_view(
 
 
 urlpatterns = [
-    path('',include('article.urls')),
+    path('', include('article.urls')),
+    path('products/', include('products.urls')),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     re_path('auth/', include('djoser.urls')),
